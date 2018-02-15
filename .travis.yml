@@ -9,10 +9,7 @@ python: 3.5
 # travis cache --delete inside the project directory from the travis command line client
 # The cache directories will be deleted if anything in ci/ changes in a commit
 cache:
- ccache: true
- directories:
-  - $HOME/.cache # cython cache
-  - $HOME/.ccache # compiler cache
+ ccache: false
 
 env:
   global:

@@ -160,6 +160,12 @@ echo "[no installed pandas]"
 conda list pandas
 pip list --format columns |grep pandas
 
+conda uninstall -y cython
+pip install git+https://github.com/scoder/cython@readonly_buffers
+# make sure we get rid of any compilation cache
+rm -rf $HOME/.cache # cython cache
+rm -rf $HOME/.ccache # compiler cache
+
 # build and install
 echo
 
